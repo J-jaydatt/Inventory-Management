@@ -1,0 +1,116 @@
+body {
+          margin: 0;
+          background: url('/Images/ban2.jpg') center center / cover no-repeat;
+          height: 100vh;
+          overflow-x: hidden;
+          position: relative;
+        }
+
+        .bg-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+        }
+
+        nav.navbar {
+          background-color: transparent;
+          color: white;
+          z-index: 2;
+          position: relative;
+          padding: 10px 30px;
+        }
+
+        .navbar-brand,
+        .navbar-nav a {
+          color: white !important;
+          font-weight: 500;
+          font-size: 1.1rem;
+        }
+
+        .navbar-nav {
+          display: flex;
+          gap: 30px;
+        }
+
+        .main {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          height: 80vh;
+          width: 100%;
+          padding: 20px;
+        }
+
+        .main h1 {
+          font-size: 4rem;
+          color: white;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          margin-bottom: 20px;
+        }
+        .navbar-brand
+        {
+          font-size: 2rem;
+          font-weight: bold ;
+        }
+
+        .main button {
+          font-size: 1.5rem;
+          padding: 12px 24px;
+          width: 200px;
+          border-radius: 8px;
+          font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+          .main h1 {
+            font-size: 2.5rem;
+          }
+
+
+          .main button {
+            font-size: 1.2rem;
+            width: 70%;
+          }
+
+          .navbar-nav {
+            gap: 20px;
+          }
+
+          .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .main h1 {
+            font-size: 2rem;
+          }
+
+          .main button {
+            font-size: 1rem;
+            width: 80%;
+          }
+
+          .navbar-nav {
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+          }
+          .navbar-brand  {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+        hr {
+          border-color: whitesmoke;
+          color:whitesmoke;
+        }

@@ -1,0 +1,42 @@
+<!-- File: src/main/resources/templates/error.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Error</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fce4e4;
+        color: #333;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .error-container {
+        background-color: #fff0f0;
+        border: 1px solid #ffcccc;
+        border-radius: 10px;
+        padding: 40px;
+        display: inline-block;
+    }
+    h1 {
+        font-size: 48px;
+        color: #e60000;
+    }
+    p {
+        font-size: 18px;
+    }
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="error-container">
+  <h1>Oops! Something went wrong.</h1>
+  <p th:text="${status} + ' - ' + ${error}">Unknown Error</p>
+  <p th:text="${message}">An unexpected error occurred.</p>
+  <a href="/">Go back to Home</a>
+</div>
+</body>
+</html>

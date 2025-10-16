@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="Admin/AdminBasePage::layout(~{::body},'Product')">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Products  View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/Admin/AdminHome.css}">
+    <style>
+        .card {
+            margin-bottom: 20px;
+            height:100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main Content -->
+<main class="main-content pt-3 px-3 container-fluid">
+    <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-bg-primary">
+                <div class="card-body">
+                    <a th:href=@{/product/category(name='COMPUTER')} class="text-decoration-none" style="color:black;">
+                      <h5 class="card-title">Computers & Accessories</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-bg-success">
+                <div class="card-body">
+                    <a th:href=@{/product/category(name='MOBILE')} class="text-decoration-none" style="color:black;">
+                       <h5 class="card-title">Mobile Devices</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-bg-warning">
+                <div class="card-body">
+                    <a th:href=@{/product/category(name='HOME')} class="text-decoration-none" style="color:black;">
+                        <h5 class="card-title">Home & Entertainment</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-bg-info">
+                <div class="card-body">
+                    <a th:href=@{/product/category(name='NETWORKING')} class="text-decoration-none" style="color:black;"s>
+                        <h5 class="card-title">Networking</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a th:href=@{/product/add} class="text-decoration-none">
+                <div class="card text-bg-info">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Product</h5>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a th:href=@{/admin/restock} class="text-decoration-none">
+                <div class="card text-bg-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">Make Purchase</h5>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+</body>
+</html>

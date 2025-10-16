@@ -1,0 +1,396 @@
+body {
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color:#343a40;
+      position: fixed;
+      top: 0;
+      color: #fff;
+      bottom: 0;
+      left: 0;
+      padding-top: 1rem;
+      z-index: 1030;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      color: #fff;
+      font-size:18px;
+    }
+
+    .sidebar a:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #fff;
+    }
+
+    #currentPage {
+
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #fff;
+
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      padding: 0 20px 20px 20px;
+      margin-bottom:40px;
+      border-bottom: 2px solid WhiteSmoke;
+    }
+
+    .user-info img {
+      width: 80px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 10px;
+      border:1px solid #495057
+
+    }
+
+    .user-info .name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .user-info .role {
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .sidebar-footer {
+        margin-top:14   0%;
+      margin-bottom:0%;
+      padding: 10px 20px;
+      border-top: 2px solid whiteSmoke;
+    }
+
+    .sidebar-footer a {
+      text-decoration: none;
+      display: flex;
+      color: #fff;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+    }
+
+    .sidebar-footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 767.98px) {
+      .sidebar {
+        display: none;
+      }
+
+      .sidebar.show {
+        display: block;
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        background-color: #343a40;
+        z-index: 2000;
+      }
+       #back {
+          width: 40%;
+        }
+      .sidebar-footer{
+        margin-top: 7px;
+      }
+      .user-info img{
+
+      width: 70px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 10px;
+      border:1px solid #495057;
+      }
+
+      .main-content {
+        padding-left: 20px !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .main-content {
+        padding-left: 270px;
+        max-width: calc(100% - 270px);
+        margin-left: 270px;
+      }
+       #back {
+          width: 40%;
+        }
+    }
+
+
+Css for the Bill form
+    .container {
+      border: 1px solid red;
+      height:50vh;
+    }
+.main-content {
+      padding: 2rem 1rem;
+    }
+
+    .container-fluid {
+      max-width: 1200px;
+    }
+
+    h2 {
+      font-weight: 700;
+      color: #1a3c6d;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .product-row {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-row:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .form-select, .form-control {
+      border-radius: 8px;
+      border: 1px solid #ced4da;
+      padding: 0.75rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-select:focus, .form-control:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .product-info {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .subtotal {
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-danger {
+      background: linear-gradient(90deg, #ef4444, #f87171);
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+    }
+
+    .btn-success {
+      background: linear-gradient(90deg, #10b981, #34d399);
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+    }
+
+    .btn-success:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #totalAmount {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container-fluid {
+        padding: 0 1rem;
+      }
+        #back{
+        width:40%;
+        }
+      .product-row {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .product-row > div {
+        width: 100%;
+      }
+
+      .btn-sm {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      #totalAmount {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* Animation for adding/removing rows */
+    .product-row {
+      animation: slideIn 0.3s ease-in;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    css for the billprint
+     .main-content {
+          padding: 2rem 1rem;
+        }
+
+        .container-fluid {
+          max-width: 1200px;
+        }
+
+        h2 {
+          font-weight: 700;
+          color: #1a3c6d;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          margin-bottom: 2rem;
+        }
+
+        .bill-container {
+          background: #ffffff;
+          border-radius: 12px;
+          padding: 2rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .bill-container h3 {
+          color: #2d3748;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+        }
+
+        .table {
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        .table th, .table td {
+          padding: 1rem;
+          vertical-align: middle;
+        }
+
+        .table thead {
+          background: linear-gradient(90deg, #3b82f6, #60a5fa);
+          color: #ffffff;
+        }
+
+        .table tbody tr:hover {
+          background-color: #f8fafc;
+        }
+
+        .btn-primary {
+          background: linear-gradient(90deg, #3b82f6, #60a5fa);
+          border: none;
+          border-radius: 8px;
+          padding: 0.75rem 1.5rem;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-success {
+          background: linear-gradient(90deg, #10b981, #34d399);
+          border: none;
+          border-radius: 8px;
+          padding: 0.75rem 1.5rem;
+        }
+
+        .btn-success:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .total-amount {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #dc3545;
+        }
+
+        /* Print-specific styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+
+          .bill-container {
+            box-shadow: none;
+            border: 1px solid #dee2e6;
+          }
+
+          body {
+            background: none;
+          }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .container-fluid {
+            padding: 0 1rem;
+          }
+
+          .bill-container {
+            padding: 1rem;
+          }
+
+          .table th, .table td {
+            font-size: 0.9rem;
+            padding: 0.5rem;
+          }
+
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          .total-amount {
+            font-size: 1.25rem;
+          }
+           #back{
+           width:40%;
+           }
+          .btn {
+            width: 100%;
+            margin-bottom: 0.5rem;
+          }
+        }

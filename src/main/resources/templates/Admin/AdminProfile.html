@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="Admin/AdminBasePage::layout(~{::body},'Profile')">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Inventory Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" th:href="@{/css/Admin/AdminHome.css}">
+  <style>
+    .card {
+        margin-bottom: 20px;
+        height:100px;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+<main class="main-content pt-3 px-3 container-fluid">
+  <div class="container-fluid">
+    <h2 class="text-center mb-4">User Details</h2>
+    <div class="bill-container" id="billContent" >
+
+
+      <div class="mb-3">
+        <strong>User Id:</strong>
+        <span th:text="${userDetails.userId}" >John Doe</span>
+      </div>
+      <div class="mb-3">
+        <strong>User Name:</strong>
+        <span th:text="${userDetails.userName}">John Doe</span>
+      </div>
+
+      <div class="mb-3">
+        <strong>User Email:</strong>
+        <span th:text="${userDetails.email}">John Doe</span>
+      </div>
+
+      <div class="mb-3">
+        <strong>Role:</strong>
+        <span th:text="${userDetails.role}">John Doe</span>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 no-print">
+      <a th:href="@{/admin/changepassword}" type="button" class="btn btn-primary me-2" >
+        Change Password
+      </a>
+    </div>
+  </div>
+</main>
+</body>
+</html>
